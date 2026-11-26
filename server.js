@@ -3,7 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = __dirname;
-const entryFile = "KerjaSiap Studio — Job Ready Toolkit Dashboard (1).html";
+const entryFile = "index.html";
 const port = Number(process.env.PORT) || 4173;
 const contentTypes = {
   ".css": "text/css; charset=utf-8",
