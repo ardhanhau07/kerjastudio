@@ -1,0 +1,593 @@
+:root {
+  --n: #172b4d;
+  --n2: #243b5a;
+  --cr: #f5f2e9;
+  --gd: #c87552;
+  --sg: #c4ced9;
+  --ds: #657587;
+  --ink: #26313e;
+  --ln: rgba(23, 43, 77, 0.16);
+  --paper: #f2f0e8;
+  --surface: #fffefa;
+  --primary: #172b4d;
+  --accent: #c87552;
+  --muted: #65717e;
+  --line: rgba(23, 43, 77, 0.16);
+  --text: #26313e;
+  --hairline: rgba(23, 43, 77, 0.16);
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(200, 117, 82, 0.55);
+  outline-offset: 3px;
+}
+
+.ksapp {
+  grid-template-columns: 264px minmax(0, 1fr);
+}
+
+.kssb {
+  background: var(--primary);
+  padding: 24px 16px;
+}
+
+.kslogo {
+  font-size: 21px;
+}
+
+.kslogo b {
+  border-radius: 9px;
+  background: var(--accent);
+  color: #fffaf1;
+}
+
+.ksprog {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.ksnh {
+  color: #b7c8bb;
+}
+
+.ksni {
+  border-radius: 8px;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.ksni:hover {
+  background: rgba(255, 255, 255, 0.09);
+  transform: none;
+}
+
+.ksni.on {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fffaf1;
+  box-shadow: inset 3px 0 var(--accent);
+}
+
+.ksni .ico,
+.ksni.on .ico {
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ksni.on .pb i {
+  background: var(--accent);
+}
+
+.ksmini {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.kstop {
+  padding: 12px 28px;
+  background: var(--paper);
+  backdrop-filter: none;
+}
+
+.ksbread {
+  color: var(--muted);
+}
+
+.kssearch input {
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.kssearch input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(200, 117, 82, 0.14);
+}
+
+.ksres {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(23, 43, 77, 0.12);
+}
+
+.ksres button {
+  border-radius: 7px;
+}
+
+.ksres button:hover {
+  background: #f1eee5;
+}
+
+.ksask,
+.kcta {
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fffaf1;
+  box-shadow: none;
+}
+
+.ksask:hover,
+.kcta:hover {
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.kh {
+  max-width: 1160px;
+  padding: 28px 32px 72px;
+}
+
+.khero {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  min-height: 390px;
+  padding: clamp(30px, 5vw, 58px);
+  border: 0;
+  border-left: 5px solid var(--accent);
+  border-radius: 14px;
+  background: var(--primary);
+  box-shadow: none;
+}
+
+.khero::before,
+.khero::after {
+  display: none;
+}
+
+.khero h1 {
+  max-width: 660px;
+  color: #fffaf1;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+.khero h1 em {
+  color: #e2a183;
+}
+
+.khero p {
+  max-width: 500px;
+  color: #d3ddd2;
+  font-size: 16px;
+}
+
+.khero .kcta {
+  padding: 12px 18px;
+}
+
+.khero .kowi {
+  display: none;
+}
+
+.kbub {
+  border: 1px solid rgba(23, 43, 77, 0.12);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.kkpi {
+  gap: 12px;
+  margin: 20px 0 44px;
+}
+
+.kk {
+  min-height: 130px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.kk:nth-child(2) {
+  border-top-color: var(--primary);
+}
+
+.kk:nth-child(3) {
+  border-top-color: #6d8294;
+}
+
+.kk:nth-child(4) {
+  border-top-color: #bd9a58;
+}
+
+.kk:hover {
+  transform: none;
+}
+
+.kk b {
+  margin: 6px 0;
+  font-size: 38px;
+}
+
+.kst {
+  margin: 46px 0 8px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.ksub {
+  color: var(--muted);
+}
+
+.kj {
+  gap: 10px;
+}
+
+.kj::before {
+  display: none;
+}
+
+.kjs {
+  min-height: 190px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.kjs:hover {
+  transform: none;
+}
+
+.kjs .nb {
+  margin: 0 0 14px;
+  border-radius: 8px;
+  background: var(--primary);
+  box-shadow: none;
+}
+
+.kjs h4 {
+  text-align: left;
+}
+
+.kjs button {
+  border-radius: 6px;
+  background: #f1eee5;
+}
+
+.kjs button:hover {
+  background: #e7e4d8;
+}
+
+.kmg {
+  gap: 12px;
+}
+
+.kmc {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--c);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.kmc:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(23, 43, 77, 0.08);
+}
+
+.kmc .ico {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+}
+
+.kmc:hover .ico {
+  transform: none;
+}
+
+.kmc h3 {
+  font-size: 20px;
+}
+
+.kmc p {
+  color: #58675e;
+}
+
+.kc,
+.kfq,
+.kgl div {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: none;
+  background: var(--surface);
+}
+
+.ktk,
+.ksr {
+  border-radius: 8px;
+  background: #ebece3;
+}
+
+.ktk button,
+.kpb button,
+.kbtn {
+  border-radius: 7px;
+  background: var(--primary);
+  color: #fffaf1;
+}
+
+.kpl {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #e8ebe2;
+}
+
+.kdisc {
+  border-radius: 9px;
+  background: #ece9dd;
+}
+
+.mod {
+  max-width: 1120px;
+}
+
+#ksview .mod {
+  --gold: var(--accent);
+  --sage: #c5d0c4;
+  --ds: #63796d;
+}
+
+#ksview .navy {
+  --navy: #f5f2e9;
+  --ink: #f5f2e9;
+  --card: rgba(255, 255, 255, 0.07);
+  --line: rgba(255, 255, 255, 0.17);
+  --soft: rgba(255, 255, 255, 0.1);
+  --dsage: #c5d0c4;
+  --acc: #e2a183;
+  --gold: #e2a183;
+  --sage: #c5d0c4;
+  background: var(--primary);
+  color: #f5f2e9;
+}
+
+#ksview .cream,
+#ksview .mist {
+  --navy: var(--primary);
+  --ink: var(--text);
+  --card: var(--surface);
+  --line: var(--hairline);
+  --soft: #ebe9df;
+  --dsage: var(--muted);
+  --acc: var(--accent);
+  --gold: var(--accent);
+  --sage: var(--muted);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+#ksview .mist {
+  background: #e9ece4;
+}
+
+#ksview .hero {
+  min-height: clamp(390px, 62vh, 600px);
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+  gap: clamp(20px, 4vw, 48px);
+  margin: 22px 22px 0;
+  padding: clamp(34px, 5vw, 64px);
+  border-radius: 14px;
+  background: var(--primary);
+}
+
+#ksview .hero .sh {
+  display: none;
+}
+
+#ksview .hero:has(.arch) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+#ksview .hero .arch {
+  display: none;
+}
+
+#ksview .hero h1 {
+  color: #fffaf1;
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+#ksview .hero h1 em,
+#ksview .hero .w.g {
+  color: #e2a183;
+}
+
+#ksview .hero p {
+  max-width: 480px;
+  color: #d3ddd2;
+  font-size: 16px;
+}
+
+#ksview .hero .tag {
+  color: #e2a183;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+#ksview .hero .arch {
+  width: min(250px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #e8ebe2;
+  box-shadow: none;
+}
+
+#ksview .hero .arch::before {
+  display: none;
+}
+
+#ksview .hero .arch .k {
+  width: 82%;
+}
+
+#ksview .mod button {
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+#ksview .mod button:hover {
+  box-shadow: none;
+}
+
+.kschat {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(23, 43, 77, 0.18);
+}
+
+.kch {
+  background: var(--primary);
+}
+
+.ksdbub {
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(23, 43, 77, 0.12);
+}
+
+.ksdo {
+  width: 82px;
+  filter: drop-shadow(0 4px 6px rgba(23, 43, 77, 0.16));
+}
+
+.kstoast {
+  border-radius: 8px;
+  background: var(--primary);
+  box-shadow: 0 8px 20px rgba(23, 43, 77, 0.18);
+}
+
+.component-error {
+  position: fixed;
+  inset: 12px 12px auto;
+  z-index: 1000;
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 4px solid var(--accent);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 8px 24px rgba(23, 43, 77, 0.16);
+}
+
+@media (max-width: 1100px) {
+  .ksapp {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .kstop {
+    gap: 8px;
+    padding: 10px 14px;
+  }
+
+  .kh {
+    padding: 18px 14px 56px;
+  }
+
+  .khero {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 28px 22px;
+  }
+
+  .khero h1 {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .kkpi {
+    gap: 8px;
+  }
+
+  .kk {
+    min-height: 110px;
+    padding: 12px;
+  }
+
+  .kk b {
+    font-size: 32px;
+  }
+
+  .kj {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kjs {
+    min-height: 0;
+  }
+
+  .kmg {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #ksview .hero {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    margin: 12px 12px 0;
+    padding: 30px 22px;
+  }
+
+  #ksview .hero .arch {
+    width: min(190px, 70vw);
+    justify-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
